@@ -302,65 +302,76 @@ h2 {
   border: 5px solid darkblue;
   margin: 30px;
 }
+/*filtre voitures d'occasion*/
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+  color: darkblue;
+}
 
+.filter label {
+  flex: 0 0 100px;
+}
+
+.filter input {
+  flex: 1; /* Faites en sorte que les champs de saisie occupent tout l'espace disponible */
+  padding: 5px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+}
+
+.filter button {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  border: 2px solid darkblue;
+  border-radius: 5px;
+  background-color: silver;
+  color: darkblue;
+  cursor: pointer;
+}
+
+/* Styles pour les écrans plus petits (par exemple, smartphones) */
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-direction: column; /* Afficher les éléments en colonne pour les petits écrans */
+  }
+
+  .filter label {
+    flex: 1; /* Occuper tout l'espace disponible en largeur pour les labels */
+    margin-bottom: 5px; /* Ajoutez une marge en bas pour séparer les labels des champs de saisie */
+  }
+
+  .filter input {
+    flex: 1; /* Occuper tout l'espace disponible en largeur pour les champs de saisie */
+    margin-bottom: 10px; /* Ajoutez une marge en bas pour séparer les champs de saisie */
+  }
+
+  .filter button {
+    width: 100%;
+  }
+}
 /* vente de vehicule doccasion */
-.grid-case {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 2fr;
+.car-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 20px;
   padding: 20px;
   border: 10px solid darkblue;
 }
+
+.car-card {
+  flex: 0 1 calc(33.33% - 20px);
+  max-width: 300px;
+  border: 2px solid darkblue;
+  padding: 10px;
+}
+
 .car-card img {
   width: 100%;
   height: 150px;
-}
-
-.car-card {
-  border: 2px solid darkblue;
-}
-
-.car-card.car1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.car-card.car2 {
-  grid-column-start: 4;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.car-card.car3 {
-  grid-column-start: 8;
-  grid-column-end: 12;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.car-card.car4 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.car-card.car5 {
-  grid-column-start: 4;
-  grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.car-card.car6 {
-  grid-column-start: 8;
-  grid-column-end: 12;
-  grid-row-start: 2;
-  grid-row-end: 3;
 }
 
 h3,
@@ -373,6 +384,16 @@ h3,
   transform: scale(1.1);
 }
 
+/* Styles pour les écrans plus petits (par exemple, smartphones) */
+@media screen and (max-width: 767px) {
+  .car-cards {
+    flex-direction: column;
+  }
+
+  .car-card {
+    flex: 1 0 100%; /* Afficher une carte par ligne */
+  }
+}
 /*fin style vente de véhicule d'occasion*/
 
 .contact-box {
@@ -398,14 +419,9 @@ h3,
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-.comment-box {
-  width: 650px;
-  height: 200px;
-  background-color: darkgrey;
   text-align: center;
-  border-radius: 10px;
 }
+
 .comment-box a {
   color: rgb(11, 166, 218);
 }
