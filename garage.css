@@ -1,0 +1,500 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(to left, darkgrey, lightgrey);
+}
+.container {
+  height: 231px;
+  background-image: linear-gradient(to bottom, black, blue);
+  margin: auto;
+  border: 5px solid darkgrey;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 0%;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1,
+h2 {
+  color: darkgrey;
+}
+
+.vis1,
+.vis2,
+.vis3,
+.vis4 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.vis1 {
+  top: 0;
+  left: 0;
+}
+
+.vis2 {
+  top: 0;
+  right: 0;
+}
+
+.vis3 {
+  bottom: 0;
+  left: 0;
+}
+
+.vis4 {
+  bottom: 0;
+  right: 0;
+}
+
+.address {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  text-align: right;
+  color: darkgray;
+  font-weight: bold;
+}
+@media only screen and (max-width: 880px) {
+  .icon-menu img[src="Image2.png"][alt=""] {
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 150px;
+  }
+
+  .navigation {
+    display: none;
+  }
+  /*affichage de la barre nav en format smartphone*/
+  .navigation.show {
+    display: flex;
+    position: absolute;
+    background: darkblue;
+    width: 100%;
+    top: 200px;
+    z-index: 1;
+  }
+
+  .navigation .nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: silver;
+    padding: 20px;
+  }
+
+  .navigation .nav-list .nav-item {
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .address {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+.navigation .nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .nav-list .nav-item {
+  cursor: pointer;
+  height: 100%;
+  padding: 0 30px;
+  transition: 0.4s;
+}
+.navigation .nav-list .nav-item:hover {
+  background: #ff0000;
+  border-radius: 10px;
+}
+
+.navigation .nav-list .nav-link {
+  color: silver;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.banner {
+  height: 30px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  width: auto;
+  /*text-align: center;*/
+}
+
+.icon-menu img[src="Image2.png"] {
+  display: none;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: 150px;
+}
+
+/* style pour le texte défilant*/
+.scrolling-text {
+  font-size: 20px;
+  color: darkblue;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll-left 15s linear infinite;
+}
+
+/* animation pour le texte défilant */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*slider*/
+
+.slide img {
+  width: 1000px;
+  height: 400px;
+}
+
+.slider {
+  width: 1000px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slides {
+  width: calc(1000px * 4);
+  animation: glisse 10s infinite;
+}
+
+.slide {
+  float: left;
+}
+
+@keyframes glisse {
+  0% {
+    transform: translateX(0);
+  }
+  12.5% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1000px);
+  }
+  37.5% {
+    transform: translateX(-1000px);
+  }
+  50% {
+    transform: translateX(-2000px);
+  }
+  62.5% {
+    transform: translateX(-2000px);
+  }
+  75% {
+    transform: translateX(-3000px);
+  }
+  87.5% {
+    transform: translateX(-3000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.titre {
+  font-size: 30px;
+  text-align: center;
+  color: darkblue;
+  margin-top: 0;
+}
+
+.section1 {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.img1 {
+  height: 400px;
+  width: 400 px;
+  float: left;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+
+.section2 {
+  float: right;
+  width: 100%;
+  font-weight: bold;
+}
+.img2 {
+  height: 400px;
+  width: 400px;
+  float: right;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+
+.section3 {
+  float: left;
+  width: 100%;
+  font-weight: bold;
+}
+
+.img3 {
+  float: left;
+  height: 400px;
+  width: 400px;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+.section4 {
+  float: right;
+  width: 100%;
+  font-weight: bold;
+}
+.section2 a:hover,
+.section3 a:hover,
+.section4 a:hover {
+  background-color: red;
+}
+.section1 p,
+.section2 p,
+.section3 p,
+.section4 p {
+  color: darkblue;
+}
+.img4 {
+  height: 400px;
+  width: 400px;
+  float: right;
+  border: 5px solid darkblue;
+  margin: 30px;
+}
+
+/* vente de vehicule doccasion */
+.grid-case {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+  border: 10px solid darkblue;
+}
+.car-card img {
+  width: 100%;
+  height: 150px;
+}
+
+.car-card {
+  border: 2px solid darkblue;
+}
+
+.car-card.car1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.car-card.car2 {
+  grid-column-start: 4;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.car-card.car3 {
+  grid-column-start: 8;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.car-card.car4 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.car-card.car5 {
+  grid-column-start: 4;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.car-card.car6 {
+  grid-column-start: 8;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+h3,
+.car-card p {
+  text-align: center;
+  margin: 5px;
+}
+
+.car-card:hover {
+  transform: scale(1.1);
+}
+
+/*fin style vente de véhicule d'occasion*/
+
+.contact-box {
+  text-align: center;
+}
+
+.comment-box,
+.contact-box p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.contact-box a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+/*avis*/
+.center-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.comment-box {
+  width: 650px;
+  height: 200px;
+  background-color: darkgrey;
+  text-align: center;
+  border-radius: 10px;
+}
+.comment-box a {
+  color: rgb(11, 166, 218);
+}
+
+/*logo centre*/
+.logo2 {
+  width: 100%;
+  height: 80%VH;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo3 img {
+  width: 450px;
+  height: 150px;
+}
+
+.titre-logo {
+  color: darkblue;
+  font-size: 50px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+/*map*/
+.section5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.section5 a {
+  color: darkblue;
+}
+.section5 a:hover {
+  background-color: red;
+}
+
+iframe {
+  border: 10px solid darkblue;
+  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+}
+
+table {
+  border-collapse: collapse;
+}
+caption {
+  font-weight: bold;
+  color: darkblue;
+}
+
+table,
+th,
+td {
+  border: 2px solid darkblue;
+  background-color: lightskyblue;
+}
+
+.divers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.adresse {
+  color: darkblue;
+}
+
+.adresse a {
+  color: darkblue;
+}
+.adresse a:hover {
+  background-color: orange;
+}
+
+.facebook-link,
+.instagram-link,
+.google-link {
+  color: darkblue;
+  padding: 5px;
+}
+.fa-facebook,
+.fa-square-instagram,
+.fa-google {
+  color: darkblue;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>témoignage</title>
+    <link rel="stylesheet" href="temoignage.css" />
+  </head>
+
+  <body>
+    <section id="testimonials">
+      <img src="logoV.Parrot.png" alt="" />
+      <h2>Témoignages</h2>
+      <form action="temoignage.php" method="post" id="testimonial-form">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="comment">Commentaire:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <label for="rating">Note:</label>
+        <input
+          type="number"
+          id="rating"
+          name="rating"
+          min="1"
+          max="5"
+          required
+        />
+        <button name="valid" type="submit">Soumettre</button>
+      </form>
+      <div id="testimonial-list">
+        <!-- Affichage en js du temoignage -->
+      </div>
+    </section>
+
+    <script src="temoignage.js"></script>
+  </body>
+</html>

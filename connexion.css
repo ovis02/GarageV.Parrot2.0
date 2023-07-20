@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.login-container img {
+  width: 150px;
+}
+
+.login-container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-container h2 {
+  text-align: center;
+}
+.login-container label,
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+  display: block;
+  margin-bottom: 10px;
+}
+.login-container button {
+  padding: 10px;
+}
+.login-container a {
+  text-align: center;
+  margin-top: 10px;
+}

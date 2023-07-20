@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire_de_contact</title>
+    <link rel="stylesheet" href="formulaire_contact.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      class="container d-flex flex-column min-vh-100 justify-content-center align-items-center"
+    >
+      <div class="form-container">
+        <a class="icon-menu" href="garage.html"
+          ><img
+            class="float-end"
+            src="logo.retour.png"
+            alt=""
+            style="width: 10%; height: auto"
+        /></a>
+        <div class="header">
+          <div class="logo d-flex justify-content-center align-items-center">
+            <div class="row">
+              <div class="col text-center">
+                <img
+                  src="logo.formulaire.png"
+                  alt="Logo HTML w3"
+                  style="width: 100%; height: auto"
+                />
+              </div>
+            </div>
+          </div>
+          <h1 class="text-center mb-5">Garage V.Parrot</h1>
+        </div>
+        <h2 class="titre text-center">CONTACTEZ-NOUS</h2>
+        <p>Les champs indiqués par un asterisque (*) sont obligatoires</p>
+        <form
+          action="formulaire.php"
+          method="post"
+          class="row g-3 needs-validation"
+          id="lessonForm"
+        >
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Nom</label>
+            <input
+              type="text"
+              class="form-control"
+              name="lastName"
+              id="lastName"
+              placeholder="Nom*"
+            />
+            <div class="invalid-feedback">Veuillez saisir votre nom.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">Prénom</label>
+            <input
+              type="text"
+              class="form-control"
+              name="firstName"
+              id="firstName"
+              placeholder="Prénom*"
+            />
+            <div class="invalid-feedback">Veuillez saisir votre prénom.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="E-mail*"
+            />
+            <div class="invalid-feedback">Veuillez saisir votre e-mail.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Téléphone</label>
+            <input
+              type="tel"
+              class="form-control"
+              name="phoneNumber"
+              id="phoneNumber"
+              placeholder="Téléphone*"
+            />
+            <div class="invalid-feedback">
+              Veuillez saisir votre numéro de téléphone.
+            </div>
+          </div>
+          <div class="form-md-6">
+            <label for="immatriculation" class="form-label"
+              >Numéro d'immatriculation :</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="immatriculation"
+              name="plateNumber"
+              placeholder="Numéro d'immatriculation"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea
+              class="form-control mt-3 mb-3"
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Votre message"
+            ></textarea>
+          </div>
+
+          <div class="col-12">
+            <div class="mb-3 form-check">
+              <label class="form-check-label" for="conditions"
+                >J'accepte les conditions</label
+              >
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="conditions"
+                name="conditions"
+              />
+              <div class="invalid-feedback">
+                Merci de lire les conditions avant de valider le formulaire.
+              </div>
+            </div>
+          </div>
+          <button type="submit" name="valid" class="couleur-btn text-white">
+            Valider
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
