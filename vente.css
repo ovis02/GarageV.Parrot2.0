@@ -44,17 +44,6 @@ h2 {
   right: 0;
 }
 
-.button {
-  position: absolute;
-  right: 5vw;
-  color: silver;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  font-size: 10px;
-}
-
 .vis3 {
   bottom: 0;
   left: 0;
@@ -73,18 +62,8 @@ h2 {
   color: darkgray;
   font-weight: bold;
 }
-@media only screen and (max-width: 880px) {
-  .button {
-    position: absolute;
-    right: 10vw;
-    color: silver;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-size: 10px;
-  }
 
+@media only screen and (max-width: 880px) {
   .icon-menu img[src="Image2.png"][alt=""] {
     display: block;
     position: absolute;
@@ -197,58 +176,6 @@ h2 {
   }
 }
 
-/*slider*/
-
-.slide img {
-  width: 1000px;
-  height: 400px;
-}
-
-.slider {
-  width: 1000px;
-  overflow: hidden;
-  margin: auto;
-}
-
-.slides {
-  width: calc(1000px * 4);
-  animation: glisse 10s infinite;
-}
-
-.slide {
-  float: left;
-}
-
-@keyframes glisse {
-  0% {
-    transform: translateX(0);
-  }
-  12.5% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-1000px);
-  }
-  37.5% {
-    transform: translateX(-1000px);
-  }
-  50% {
-    transform: translateX(-2000px);
-  }
-  62.5% {
-    transform: translateX(-2000px);
-  }
-  75% {
-    transform: translateX(-3000px);
-  }
-  87.5% {
-    transform: translateX(-3000px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 .titre {
   font-size: 30px;
   text-align: center;
@@ -256,132 +183,139 @@ h2 {
   margin-top: 0;
 }
 
-.section1 {
-  width: 100%;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.img1 {
-  height: 400px;
-  width: 400 px;
-  float: left;
-  border: 10px solid darkblue;
-  margin: 30px;
-}
-
-.section2 {
+.section4 {
   float: right;
   width: 100%;
   font-weight: bold;
 }
-.img2 {
-  height: 400px;
-  width: 400px;
-  float: right;
-  border: 10px solid darkblue;
-  margin: 30px;
-}
 
-.section3 {
-  float: left;
-  width: 100%;
-  font-weight: bold;
-}
-
-.img3 {
-  float: left;
-  height: 400px;
-  width: 400px;
-  border: 10px solid darkblue;
-  margin: 30px;
-}
-
-.section2 a:hover,
-.section3 a:hover {
+.section4 a:hover {
   background-color: red;
 }
-.section1 p,
-.section2 p,
-.section3 p {
+
+.section4 p {
+  color: darkblue;
+  font-weight: 20px;
+}
+
+.img4 {
+  height: 400px;
+  width: 400px;
+  float: right;
+  border: 5px solid darkblue;
+  margin: 30px;
+}
+
+/*ecran smartphone 767px*/
+@media screen and (max-width: 767px) {
+.titre {
+    font-size: 24px;
+  }
+
+  .img4 {
+    height: 200px;
+    width: 200px;
+    float: none;
+    margin: 10px auto;
+    border: 5px solid darkblue;
+  }
+
+  .section4 {
+    width: 90%;
+    margin: 0 auto;
+    font-weight: normal; /* Pour annuler le bold sur les écrans plus petits */
+
+  }
+
+  .section4 a:hover {
+    background-color: initial; /* Pour annuler le hover background color sur les écrans plus petits */
+  }
+
+
+
+  /* Filtrer les styles pour les écrans de smartphone */
+  .filter {
+    gap: 5px;
+    margin: 10px;
+    padding: 10px; /* Ajouter un espace intérieur pour le filtre */
+  }
+
+  /* Ajouter un espace entre le filtre et le contenu suivant */
+  .car-cards {
+    margin-top: 60px;
+  }
+
+}
+
+
+
+
+
+
+/*filtre voitures d'occasion*/
+.filter {
+  display: fle
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
   color: darkblue;
 }
 
-.contact-box {
-  text-align: center;
+.filter label {
+  flex: 0 0 100px;
 }
 
-.comment-box,
-.contact-box p {
-  margin-bottom: 10px;
-  font-weight: bold;
+.filter input {
+  /*flex: 1; /* Faites en sorte que les champs de saisie occupent tout l'espace disponible */
+  padding: 5px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+}
+
+.filter button {
+    margin: 10px;
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  border: 2px solid darkblue;
+  border-radius: 5px;
+  background-color: silver;
   color: darkblue;
+  cursor: pointer;
 }
 
-.contact-box a {
-  text-decoration: none;
-  color: red;
-  font-weight: bold;
-}
-
-/*avis*/
-.center-comment {
+/* vente de vehicule doccasion */
+.car-cards {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+  border: 10px solid darkblue;
 }
 
-.comment-box a {
-  color: rgb(11, 166, 218);
+.car-card {
+  flex: 0 1 calc(33.33% - 20px);
+  max-width: 300px;
+  border: 2px solid darkblue;
+  padding: 10px;
 }
 
-/*logo centre*/
-.logo2 {
+.car-card img {
   width: 100%;
-  height: 80%VH;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.logo3 img {
-  width: 450px;
   height: 150px;
 }
 
-.titre-logo {
-  color: darkblue;
-  font-size: 50px;
-  margin-top: 0px;
+h3,
+.car-card p {
   text-align: center;
+  margin: 5px;
 }
 
-/*map*/
-.section5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  text-align: center;
-  color: darkblue;
-  font-weight: bold;
+.car-card:hover {
+  transform: scale(1.1);
 }
 
-.section5 a {
-  color: darkblue;
-}
-.section5 a:hover {
-  background-color: red;
-}
-
-iframe {
-  border: 10px solid darkblue;
-  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-}
+/*fin style vente de véhicule d'occasion*/
 
 table {
   border-collapse: collapse;
