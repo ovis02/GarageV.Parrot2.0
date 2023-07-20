@@ -16,11 +16,6 @@ body {
   position: relative;
 }
 
-h1 {
-  font-size: 48px;
-  line-height: 0%;
-}
-
 h2 {
   font-size: 20px;
 }
@@ -49,6 +44,17 @@ h2 {
   right: 0;
 }
 
+.button {
+  position: absolute;
+  right: 5vw;
+  color: silver;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 10px;
+}
+
 .vis3 {
   bottom: 0;
   left: 0;
@@ -68,12 +74,23 @@ h2 {
   font-weight: bold;
 }
 @media only screen and (max-width: 880px) {
+  .button {
+    position: absolute;
+    right: 10vw;
+    color: silver;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 10px;
+  }
+
   .icon-menu img[src="Image2.png"][alt=""] {
     display: block;
     position: absolute;
     height: 35px;
     width: 35px;
-    top: 150px;
+    top: 165px;
   }
 
   .navigation {
@@ -118,7 +135,7 @@ h2 {
   }
 
   h2 {
-    font-size: 16px;
+    display: none;
   }
 }
 
@@ -158,7 +175,7 @@ h2 {
   position: absolute;
   height: 35px;
   width: 35px;
-  top: 150px;
+  top: 160px;
 }
 
 /* style pour le texte défilant*/
