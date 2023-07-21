@@ -195,7 +195,7 @@ h2 {
 
 .section4 p {
   color: darkblue;
-  font-weight: 20px;
+  font-size: large;
 }
 
 .img4 {
@@ -243,6 +243,34 @@ h2 {
   /* Ajouter un espace entre le filtre et le contenu suivant */
   .car-cards {
     margin-top: 60px;
+  }
+
+   table,
+  th,
+  td {
+    border: 1px solid darkblue; 
+    background-color: lightskyblue;
+    font-size: 14px; 
+  }
+
+  caption {
+    font-size: 16px; 
+  }
+
+  .divers {
+    display: block; 
+  }
+
+  .adresse,
+  .adresse a {
+    font-size: 14px; 
+  }
+
+  .facebook-link,
+  .instagram-link,
+  .google-link {
+    font-size: 14px; 
+    padding: 3px;
   }
 
 }

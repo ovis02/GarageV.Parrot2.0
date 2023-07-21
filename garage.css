@@ -73,7 +73,12 @@ h2 {
   color: darkgray;
   font-weight: bold;
 }
+
 @media only screen and (max-width: 880px) {
+  .logo3 img {
+    width: 100px;
+    height: 150px;
+  }
   .button {
     position: absolute;
     right: 10vw;
@@ -123,19 +128,80 @@ h2 {
   .address {
     visibility: hidden;
   }
+  .slider {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 650px) {
+  .description {
+    font-weight: normal;
+  }
+
+  .img1,
+  .img2,
+  .img3 {
+    width: 100px;
+    height: 100px;
+    float: none;
+    margin: 10px auto;
+  }
+
+  .img1,
+  .img2,
+  .img3 {
+    border: 5px solid darkblue;
+  }
+
   .logo img {
     height: 60px;
     width: auto;
   }
+
   h1 {
     font-size: 26px;
   }
 
   h2 {
     display: none;
+  }
+
+  .titre {
+    font-size: small;
+  }
+  .section5 {
+    padding: 10px; /* Ajoute un espace de 10px autour de la section pour laisser de la place aux bordures de l'iframe */
+  }
+  .section5 iframe {
+    max-width: 300px; /* l'iframe sur un smartphone */
+    height: 400px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid darkblue;
+    background-color: lightskyblue;
+    font-size: 14px;
+  }
+
+  caption {
+    font-size: 16px;
+  }
+
+  .divers {
+    display: block;
+  }
+
+  .adresse,
+  .adresse a {
+    font-size: 14px;
+  }
+
+  .facebook-link,
+  .instagram-link,
+  .google-link {
+    font-size: 14px;
+    padding: 3px;
   }
 }
 
