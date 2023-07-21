@@ -23,6 +23,7 @@ h2 {
 h1,
 h2 {
   color: darkgrey;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .vis1,
@@ -371,6 +372,7 @@ h2 {
 .section2 p,
 .section3 p {
   color: darkblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .contact-box {
